@@ -199,7 +199,7 @@ The hardware setup consists of an ESP32 DevKit connected to a MAX30102 pulse oxi
 ### Real-Time BPM Graph
 
 <p align="center">
-  <img src="assets/BPM-graph.jpeg" alt="Heart Rate Graph" width="750">
+  <img src="assets/bpm-graph.jpeg" alt="Heart Rate Graph" width="750">
 </p>
 
 ---
@@ -215,7 +215,7 @@ The hardware setup consists of an ESP32 DevKit connected to a MAX30102 pulse oxi
 ### ESP32 Serial Monitor
 
 <p align="center">
-  <img src="assets/PuTTY-serial-monitor.png" alt="Serial Monitor" width="700">
+  <img src="assets/putty-serial-monitor.png" alt="Serial Monitor" width="700">
 </p>
 
 ---
