@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBot AI</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>MedBot AI</h2>
+
+    <div class="status-bar" id="status-text">
+        Waiting for sensor data...
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="value" id="hr-val">--</div>
+            <div class="label">BPM</div>
+        </div>
+
+        <div class="card">
+            <div class="value" id="spo2-val">--</div>
+            <div class="label">% SpO₂</div>
+        </div>
+
+        <div class="card">
+            <div class="value" id="temp-val">--</div>
+            <div class="label">°C</div>
+        </div>
+
+    </div>
+
+    <div id="chat-interface">
+
+        <div id="chat-box"></div>
+
+        <div class="input-row">
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask MedBot a question..."
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="disclaimer">
+
+        <strong>⚠️ EXPERIMENTAL PROTOTYPE</strong><br><br>
+
+        MedBot AI is a demonstration tool.
+
+        Vitals and AI responses are
+        <strong>not medical diagnoses</strong>.
+
+        Do not rely on this system for health decisions.
+
+        Always consult a qualified medical professional.
+
+    </div>
+
+</div>
+
+<!-- Python variables available to JavaScript -->
+<script>
+const API_KEY = "{{ api_key }}";
+const MODEL_NAME = "{{ model_name }}";
+</script>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
